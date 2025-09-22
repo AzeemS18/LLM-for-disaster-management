@@ -25,8 +25,8 @@ except ImportError:
     os.system("pip install httpx")
 
 
-nexus_api_key = "sk-QjjMoRwKPjHXTEzvcum3eA"
-nexus_api_url = "https://api.nexus.navigatelabsai.com"
+nexus_api_key = ""
+nexus_api_url = ""
 
 client = openai.OpenAI(
     api_key=nexus_api_key,
@@ -338,4 +338,5 @@ if prompt := st.chat_input("Ask a question..."):
         with st.chat_message("assistant"):
             st.markdown(bot_response)
     except Exception as e:
+
         st.error(f"An error occurred: {e}")
